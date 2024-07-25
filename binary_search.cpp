@@ -32,3 +32,6 @@ int main(){
     }
     return 0;
 }
+// Best case : O(1)
+// Average case : O(logn)
+// Worst case : O(logn)
