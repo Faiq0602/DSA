@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-void swap (int &a , int &b){
+void swap (int &a , int &b){ // Swap function to swap the elements
     int temp = a;
     a = b;
     b = temp;
 }
 
-int partition (int arr[], int low , int high){
+int partition (int arr[], int low , int high){ // Partitioning to arrange the elements accordingly
     int pivot = arr[high];
     int i = low - 1;
     for(int j = low ; j < high; ++j){
@@ -20,7 +20,7 @@ int partition (int arr[], int low , int high){
     return i + 1;
 }
 
-void quicksort(int arr[], int low , int high){
+void quicksort(int arr[], int low , int high){ // Recursively partitoning and arranging elements to get a sorted array
     if(low < high){
         int pi = partition(arr,low,high);
         quicksort(arr,low,pi-1);
@@ -38,3 +38,7 @@ for(int i = 0; i < n; i++){
 
     return 0;
 }
+
+
+// Average case complexity : O(nlogn)
+// Worst case complexity (On^2)
